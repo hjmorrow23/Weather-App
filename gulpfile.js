@@ -7,12 +7,15 @@ var browserSync = require('browser-sync').create();
 gulp.task('sass', function() {
     return gulp.src('src/scss/style.scss')
         .pipe(plugins.sass())
-        .pipe(gulp.dest('assets/css'))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('sass:watch', function() {
+	gulp.watch(['src/scss/*', 'src/scss/**/*'], ['sass']);
+})
+
 gulp.task('autoprefixer', function () {
-    return gulp.src('./src/*.css')
+    return gulp.src('assets/css/*.css')
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.postcss([ plugins.autoprefixer() ]))
         .pipe(sourcemaps.write('.'))

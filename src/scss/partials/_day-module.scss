@@ -1,0 +1,30 @@
+.forecast {
+	margin-bottom: 30rem;
+}
+
+.day-wrapper {
+	position: relative;
+	display: block;
+}
+
+.seven-day {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 10rem;
+	@extend %centered;
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	transition: opacity 1s, transform 1s;
+}
+
+.day {
+	width: 13%;
+	display: inline-block;
+	padding: 0 1.5rem;
+}
+
+.weekday {
+	font-size: 1rem;
+}
+
