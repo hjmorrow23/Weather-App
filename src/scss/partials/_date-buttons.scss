@@ -1,0 +1,43 @@
+.btn-row {
+// 	text-align: center;
+	position: relative;
+// 	margin-bottom: 4rem;
+	top: 4rem;
+	z-index: 100;
+}
+
+
+.search-form {
+	position: absolute;
+}
+.one-day,
+.five-day {
+	margin: 0;
+	position: absolute;
+	background-color: gray;
+	border: 1px solid black;
+	background-color: white; 
+	-webkit-box-shadow: inset 0px 0px 34px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 0px 34px 0px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 34px 0px rgba(0,0,0,0.5);
+
+}
+
+.one-day {
+	left: calc(50% - 56px);
+}
+
+.five-day {
+	left: 50%;
+}
+
+.btn-active {
+	background-color: white; 
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+button:focus {
+	outline: none;
+}

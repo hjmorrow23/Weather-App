@@ -1,10 +1,17 @@
 .forecast {
-	margin-bottom: 30rem;
+	padding-top: 3rem;
+	margin-bottom: 28rem;
+	height: auto;
+	position: relative;
 }
 
 .day-wrapper {
 	position: relative;
 	display: block;
+}
+
+.location {
+	@extend %centered;
 }
 
 .seven-day {
@@ -22,9 +29,29 @@
 	width: 13%;
 	display: inline-block;
 	padding: 0 1.5rem;
+// 	background-color: rgba(252,252,252, .6);
 }
 
 .weekday {
+	font-size: 1.5rem;
+}
+
+.temperature-heading,
+.wind-heading {
+	margin-bottom: 0;
+	font-weight: 500;
+}
+
+.temperature {
+	margin-bottom: 2rem;
+}
+
+.temperature,
+.wind {
 	font-size: 1rem;
+}
+
+.icon {
+	margin-top: 2rem;
 }
 

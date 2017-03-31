@@ -10,20 +10,21 @@
 </head>
 <body>
 	<div class="body-wrapper">
-		<header>
+		<header class="main-header">
 			<h1 class="main-heading">Weekly Weather</h1>
-			<div class="week-wrapper">
-				<button class="left-arrow"></button>
-				<div class="date-wrapper">
-					<h2 class="week-heading active" id="one">March 19 - 25</h2>
-					<h2 class="week-heading hide-right" id="two">March 26 - April 1</h2>
-					<h2 class="week-heading hide-right" id="three">April 2 - 9</h2>
-				</div>
-				<button class="right-arrow"></button>
+			<form class="search-form">
+				<label for="search">Search by Location</label>
+				<input type="text" name="search" value="" class="location">
+				<a href="#" class="search"><img src="img/magnifying-glass.png" alt="" /></a>
+			</form>
+			<div class="btn-row">
+				<button class="one-day btn-active">1 Day</button>
+				<button class="five-day">5 Day</button>
 			</div>
 		</header>
 		<section class="forecast">
 			<div class="day-wrapper">
+<!--
 				<ul class="seven-day show">
 					<li class="day">
 						<h1 class="weekday">Sunday</h1>
@@ -75,6 +76,8 @@
 						<p class="wind">E 10mph</p>
 					</li>
 				</ul>
+-->
+<!--
 				<ul class="seven-day hidden-right">
 					<li class="day">
 						<h1 class="weekday">Sunday</h1>
@@ -177,12 +180,16 @@
 						<p class="wind">E 10mph</p>
 					</li>
 				</ul>
+-->
 			</div>		
 		</section>
 		<footer class="main-footer">
 			<p class="credits">Courtesy of  Weather API</p>
 		</footer>
 	</div>
+	<video playsinline autoplay muted loop poster="img/skyandclouds.png" id="bgvid">
+	    <source src="img/SkyAndCloudsh264.mp4" type="video/mp4">
+	</video>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 </body>

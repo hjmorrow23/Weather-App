@@ -407,59 +407,82 @@ body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif; }
 
-.main-heading, .week-wrapper, .seven-day, .credits {
+.body-wrapper {
+  background-color: rgba(252, 252, 252, 0.6);
+  height: auto;
+  padding-bottom: 6rem;
+  position: relative; }
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("../../img/skyandclouds.png") no-repeat;
+  background-size: cover; }
+
+.main-heading, .location, .seven-day, .credits {
   text-align: center; }
 
-.week-wrapper {
-  margin-bottom: 3rem; }
-
-.left-arrow,
-.right-arrow,
-.date-wrapper {
+.main-header {
+  height: auto;
   position: relative;
-  display: inline-block; }
+  bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
-.left-arrow {
-  right: 35%; }
-
-.right-arrow {
-  left: 35%; }
-
-.date-wrapper {
-  width: 16rem;
-  margin: 0 auto; }
-
-.week-heading {
-  display: inline-block;
-  transition: opacity 1s, transform 1s;
+.search-form {
+  padding-bottom: 2rem;
   position: absolute;
-  overflow: hidden;
+  left: 38%; }
+
+.btn-row {
+  position: relative;
+  top: 4rem;
+  z-index: 100; }
+
+.search-form {
+  position: absolute; }
+
+.one-day,
+.five-day {
   margin: 0;
-  width: 100%;
-  right: 0;
-  bottom: -.5rem; }
+  position: absolute;
+  background-color: gray;
+  border: 1px solid black;
+  background-color: white;
+  -webkit-box-shadow: inset 0px 0px 34px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 34px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 34px 0px rgba(0, 0, 0, 0.5); }
 
-.hide-left,
-.hide-right,
-.hidden-left,
-.hidden-right {
-  opacity: 0; }
+.one-day {
+  left: calc(50% - 56px); }
 
-.hide-left,
-.hidden-left {
-  transform: translateX(-100%); }
+.five-day {
+  left: 50%; }
 
-.hide-right,
-.hidden-right {
-  transform: translateX(100%); }
+.btn-active {
+  background-color: white;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
 
-.active,
-.show {
-  opacity: 1;
-  transform: translateX(0); }
+button:focus {
+  outline: none; }
 
 .forecast {
-  margin-bottom: 30rem; }
+  padding-top: 3rem;
+  margin-bottom: 28rem;
+  height: auto;
+  position: relative; }
 
 .day-wrapper {
   position: relative;
@@ -480,4 +503,22 @@ body {
   padding: 0 1.5rem; }
 
 .weekday {
+  font-size: 1.5rem; }
+
+.temperature-heading,
+.wind-heading {
+  margin-bottom: 0;
+  font-weight: 500; }
+
+.temperature {
+  margin-bottom: 2rem; }
+
+.temperature,
+.wind {
   font-size: 1rem; }
+
+.icon {
+  margin-top: 2rem; }
+
+.credits {
+  position: relative; }

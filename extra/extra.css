@@ -1,0 +1,68 @@
+.week-wrapper {
+	@extend %centered;
+	margin-bottom: 3rem;
+}
+
+.left-arrow,
+.right-arrow,
+.date-wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.left-arrow,
+.right-arrow,
+.week-heading {
+	
+}
+
+.left-arrow {
+// 	float: left;
+	right: 35%; 
+}
+
+.right-arrow {
+// 	float: right;
+	left: 35%;
+}
+
+.date-wrapper {
+	width: 16rem;
+	margin: 0 auto;
+}
+
+.week-heading {
+	display: inline-block;
+	transition: opacity 1s, transform 1s;
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	right: 0;
+	bottom: -.5rem;
+	
+}
+
+.hide-left,
+.hide-right,
+.hidden-left,
+.hidden-right {
+	opacity: 0;
+}
+
+.hide-left,
+.hidden-left {
+	transform: translateX(-100%);
+	
+}
+
+.hide-right,
+.hidden-right {
+	transform: translateX(100%);
+}
+
+.active,
+.show {
+	opacity: 1;
+	transform: translateX(0);
+}
