@@ -1,8 +1,12 @@
 .forecast {
 	padding-top: 3rem;
-	margin-bottom: 28rem;
-	height: auto;
+	min-height: 553.438px;
 	position: relative;
+	display: block;
+	
+		@include max-down(768px) {
+			min-height: 430px;
+		}
 }
 
 .day-wrapper {
@@ -30,6 +34,13 @@
 	display: inline-block;
 	padding: 0 1.5rem;
 // 	background-color: rgba(252,252,252, .6);
+
+	@include max-down(768px) {
+		width: 75%;
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
 .weekday {

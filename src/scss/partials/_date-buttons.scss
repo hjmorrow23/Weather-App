@@ -1,19 +1,28 @@
 .btn-row {
-// 	text-align: center;
+	text-align: center;
 	position: relative;
 // 	margin-bottom: 4rem;
-	top: 4rem;
+// 	top: 4rem;
 	z-index: 100;
+	left: calc(45.5% - 263.344px);
+// 	right: 4rem;
+
+	@include max-down(768px) {
+		left: 0;
+		top: 1.5rem;
+	}
 }
 
 
 .search-form {
-	position: absolute;
+	position: relative;
+// 	order: 3;
+// 	right: 1.5rem;
 }
 .one-day,
 .five-day {
 	margin: 0;
-	position: absolute;
+// 	position: absolute;
 	background-color: gray;
 	border: 1px solid black;
 	background-color: white; 
@@ -29,6 +38,11 @@
 
 .five-day {
 	left: 50%;
+	
+	@include max-down(768px) {
+		display: none;
+	}
+	
 }
 
 .btn-active {

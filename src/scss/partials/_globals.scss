@@ -5,13 +5,17 @@
 body {
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
+	max-width: 100%;
 }
 
 .body-wrapper {
 	background-color: rgba(252,252,252, .6);
 	height: auto;
-    padding-bottom: 6rem;
+//     padding-bottom: 6rem;
     position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    
 }
 
 video#bgvid { 
