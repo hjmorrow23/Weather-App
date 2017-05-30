@@ -97,3 +97,28 @@ $('.search').click(function() {
 		});
 	});
 });
+
+$(".location").keypress(function(e) {
+    if(e.which == 13) {
+	    e.preventDefault();
+        var city = getSearchLocation();
+		console.log(city);
+		$.getJSON('http://api.openweathermap.org/data/2.5/forecast?q=' + city + ',us&units=imperial&APPID=f3ca74b01a93f4ec83050fe63dd88908', function(data) {
+			console.log(data);
+			
+			oneDay(data);
+			
+			$('.one-day').click(function() {
+				$(this).addClass('btn-active');
+				$('.five-day').removeClass('btn-active');
+				oneDay(data);
+			});
+			
+			$('.five-day').click(function() {
+				$(this).addClass('btn-active');
+				$('.one-day').removeClass('btn-active');
+				fiveDay(data);
+			});
+		});
+	}
+});
