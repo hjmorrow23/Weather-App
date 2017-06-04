@@ -7,6 +7,7 @@ var plumber = require("gulp-plumber");
 var notifier = require("node-notifier");
 var notify = require("gulp-notify");
 var uglify = require("gulp-uglify");
+var pages = require("gulp-gh-pages");
 
 // BrowserSync server
 gulp.task('browser-sync', function() {
@@ -40,6 +41,11 @@ gulp.task('scripts', function() {
             message: "Error: <%= error.message %>"
         }))
         .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('deploy', function() {
+	return gulp.src('./assets/**/*')
+		.pipe(pages());
 });
 
 gulp.task('default', ['sass', 'scripts', 'browser-sync'], function() {
