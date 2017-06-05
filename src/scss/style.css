@@ -400,6 +400,7 @@ template {
 [hidden] {
   display: none; }
 
+/* Global Styles */
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -431,24 +432,17 @@ video#bgvid {
   background: url("../../img/skyandclouds.png") no-repeat;
   background-size: cover; }
 
+/* Helpers */
 .location, .seven-day, .credits {
   text-align: center; }
 
 /* Mixins */
+/* Header Section */
 .main-header {
   height: auto;
-  /*
-	position: relative;
-    bottom: 2rem;
-*/
   display: block;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  /*
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-*/ }
+  padding-bottom: 1rem; }
 
 .main-heading {
   margin-top: 0;
@@ -462,11 +456,7 @@ video#bgvid {
 .search-form {
   float: right;
   padding-top: .5rem;
-  padding-right: 2rem;
-  /*
-	position: absolute;
-	left: 38%;
-*/ }
+  padding-right: 2rem; }
 
 .search {
   position: relative;
@@ -485,6 +475,7 @@ video#bgvid {
     .btn-row {
       display: block; } }
 
+/* Date Buttons */
 .btn-row {
   text-align: center;
   position: relative;
@@ -526,6 +517,7 @@ video#bgvid {
 button:focus {
   outline: none; }
 
+/* Forecast Module */
 .forecast {
   padding-top: 3rem;
   min-height: 553.438px;
@@ -577,5 +569,6 @@ button:focus {
 .icon {
   margin-top: 2rem; }
 
+/* Footer Section */
 .credits {
   position: relative; }

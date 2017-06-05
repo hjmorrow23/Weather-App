@@ -1,7 +1,9 @@
+//List Month Names for Display on Page
 var monthNames = ["January", "February", "March", "April", "May", "June",
 			  "July", "August", "September", "October", "November", "December"
 			];
 
+//Check the weather status and display the icon to show conditions
 function checkWeatherIcon(e) {
 	var icon = "";	
 	var weatherId = e.weather[0].id;
@@ -27,16 +29,21 @@ function checkWeatherIcon(e) {
 	return icon;
 }
 
+//Adjust string case for searches
 function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return str.replace(/\w\S*/g, function(txt){
+	    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
 }
 
+//Get the location entered in search input
 function getSearchLocation() {
 	var city = $('.location').val();
 	city = toTitleCase(city).replace(/\s+/g, '+');
 	return city;
 }
-			
+
+//Display data for a one day forecast			
 function oneDay(data) {
 	var weather = data.list[0];
 	var date= new Date(weather.dt_txt);
@@ -55,6 +62,7 @@ function oneDay(data) {
 	$('.day-wrapper').html(weatherHtml);
 }
 
+//Display data for a five day forecast
 function fiveDay(data) {
 	var weatherHtml = '<h1 class="location">' + data.city.name + '</h1>';
 	weatherHtml += '<ul class="seven-day">';
@@ -75,7 +83,7 @@ function fiveDay(data) {
 	$('.day-wrapper').html(weatherHtml);
 }
 
-
+//Grab data with AJAX request from API on click for input
 $('.search').click(function() {
 	var city = getSearchLocation();
 	console.log(city);
@@ -98,6 +106,7 @@ $('.search').click(function() {
 	});
 });
 
+//Grab data from API on enter keypress for input
 $(".location").keypress(function(e) {
     if(e.which == 13) {
 	    e.preventDefault();

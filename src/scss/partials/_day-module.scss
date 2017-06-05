@@ -1,3 +1,5 @@
+/* Forecast Module */
+
 .forecast {
 	padding-top: 3rem;
 	min-height: 553.438px;
@@ -33,7 +35,6 @@
 	width: 13%;
 	display: inline-block;
 	padding: 0 1.5rem;
-// 	background-color: rgba(252,252,252, .6);
 
 	@include max-down(768px) {
 		width: 75%;
